@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Global Font Classes */
+.font-cinzel {
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-garamond {
+    font-family: 'EB Garamond', Georgia, serif;
+}
+
+.font-lora {
+    font-family: 'Lora', Georgia, serif;
+}
+
+.font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+    background: #0b0e14;
+}
+html.dark ::-webkit-scrollbar-thumb {
+    background: #283347;
+    border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #3b4963;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+    background: #f4f1ea;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+    background: #d1c8b8;
+    border-radius: 4px;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+    background: #b5a995;
+}
+
+/* Subtle Classic Textures */
+.classic-parchment-pattern {
+    background-color: #faf7f2;
+    background-image: radial-gradient(#d6cec0 0.75px, transparent 0.75px);
+    background-size: 18px 18px;
+}
+
+html.dark .classic-parchment-pattern {
+    background-color: #0b0e14;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.75px, transparent 0.75px);
+    background-size: 18px 18px;
+}
+
+/* Smooth Transitions for Theme Switch */
+body, header, aside, main, div, input, textarea, button {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Message Animation */
+@keyframes classicFadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-animate {
+    animation: classicFadeSlide 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Typing Indicator Bouncing Dots */
+@keyframes classicPulseDot {
+    0%, 80%, 100% {
+        transform: scale(0.65);
+        opacity: 0.35;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.typing-dot:nth-child(1) {
+    animation: classicPulseDot 1.4s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) {
+    animation: classicPulseDot 1.4s infinite ease-in-out 0.2s;
+}
+.typing-dot:nth-child(3) {
+    animation: classicPulseDot 1.4s infinite ease-in-out 0.4s;
+}
